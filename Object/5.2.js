@@ -16,17 +16,17 @@ function AskTvSeries(){
 }
 
 
-function RandomizeCast(array){
-    for(let i = array.length -1; i > 0 ; i--){
+function RandomizeCast(AskTvSeries){
+    let series = AskTvSeries();
+    for(let i = series.cast.length -1; i > 0 ; i--){
         let j = Math.floor(Math.random() * (i + 1));
-        let tampon = array[i];
-        array[i] = array[j];
-        array[j] = tampon;
+        let tampon = series.cast[i];
+        series.cast[i] = series.cast[j];
+        series.cast[j] = tampon;
     }
-    return array;
+    return series;
 }
 
-let mySerie = AskTvSeries();
 
-console.log(JSON.stringify(mySerie));
-console.log(JSON.stringify(RandomizeCast(mySerie.cast)));
+// console.log(JSON.stringify(mySerie));
+console.log(JSON.stringify(RandomizeCast(AskTvSeries)));
