@@ -10,9 +10,12 @@ class Rectangle{
 
     collide(otherReclangle = new Rectangle()){
 
-        if((this.topLeftXPos + this.length) === otherReclangle.topLeftXPos || (this.topLeftYPos + this.width) === otherReclangle.topLeftYPos || this.topLeftXPos === (otherReclangle.topLeftXPos + otherReclangle.length) || this.topLeftYPos === (otherReclangle.topLeftYPos + otherReclangle.width)){
-            return true;
-        }
+        if (this.topLeftXPos < otherReclangle.topLeftXPos + otherReclangle.width &&
+            this.topLeftXPos + this.width > otherReclangle.topLeftXPos &&
+            this.topLeftYPos < otherReclangle.topLeftYPos + otherReclangle.length &&
+            this.length + this.topLeftYPos > otherReclangle.topLeftYPos){
+                return true;
+            }
         else{
             return false;
         } 
