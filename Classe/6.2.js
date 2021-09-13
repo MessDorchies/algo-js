@@ -16,9 +16,6 @@ class Rectangle{
             this.length + this.topLeftYPos > otherReclangle.topLeftYPos){
                 return true;
             }
-        // if((this.topLeftXPos + this.length) === otherReclangle.topLeftXPos || (this.topLeftYPos + this.width) === otherReclangle.topLeftYPos || this.topLeftXPos === (otherReclangle.topLeftXPos + otherReclangle.length) || this.topLeftYPos === (otherReclangle.topLeftYPos + otherReclangle.width)){
-        //     return true;
-        // }
         else{
             return false;
         } 
