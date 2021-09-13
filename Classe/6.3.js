@@ -14,7 +14,7 @@ class Rectangle{
             this.topLeftXPos + this.width > otherReclangle.topLeftXPos &&
             this.topLeftYPos < otherReclangle.topLeftYPos + otherReclangle.length &&
             this.length + this.topLeftYPos > otherReclangle.topLeftYPos){
-                return true;
+            return true;
             }
         else{
             return false;
